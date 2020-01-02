@@ -7,11 +7,9 @@ mongoose.connect('mongodb://localhost/hackednews');
 var seedDb = function(data) {
   // your code here!
 
-  data.forEach(element => {
     Stories.insertOne(element, (err) => {
       if (err) console.log(err)
     })
-  });
 
 
 
