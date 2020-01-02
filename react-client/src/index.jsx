@@ -4,26 +4,12 @@ import TopTen from './components/topTen.jsx';
 import $ from 'jquery';
 import seedData from './../../seed_data'
 
-// const App = (props) => {
-    
-//     const dataList = seedData.slice(0, 10).map((elm, index) => (
-//         <TopTen data={elm} key={index}/>
-//     )) 
-    
-//     return (
-//     <div>
-//         <button>Top Ten Stories</button>
-//         <button>Top Ten Authors</button>
-//         {dataList}
-//     </div>)
-    
-// };
 
 class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            page: 0
+            page: "page one"
         }
         this.handelPageOne = this.handelPageOne.bind(this)
         this.handelPageTwo = this.handelPageTwo.bind(this)
@@ -65,9 +51,11 @@ class App extends React.Component {
         return (
             <main>
                 
-                <h1> Top Ten Stories </h1>
                 <button onClick={this.handelPageOne}>Top Ten Stories</button>
                 <button onClick={this.handelPageTwo}>Top Ten Authors</button>
+                {this.state.page === "page one" && <h1> Top Ten Stories </h1>}
+                {this.state.page === "page two" && <h1> Top Ten Author </h1>}
+
                 <table>
                     <thead>
                         <tr>

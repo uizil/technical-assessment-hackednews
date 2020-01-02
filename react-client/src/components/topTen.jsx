@@ -1,6 +1,5 @@
 import React from 'react';
 
-import TopTenAuthors from './TopTenAuthors.jsx';
 
 // import seedData from './../../../seed_data'
 // Build out the view for the top ten HackerNews stories here. 
