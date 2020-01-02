@@ -2,6 +2,10 @@ import React from 'react';
 
 
 
-const TopAuthores = props => {
+const TopAuthores = () => {
+
+    return (<p>top aurthors..</p>)
+
 
 } 
+export default TopAuthores
