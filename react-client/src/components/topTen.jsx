@@ -11,14 +11,12 @@ const TopTen = props => (
       <tr>
         <th>Title</th>
         <th>Author</th>
-        <th>Score</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>{props.data.title}</td>
         <td>{props.data.by.id}</td>
-        <td>{props.data.score}</td>
       </tr>
     </tbody>
     
