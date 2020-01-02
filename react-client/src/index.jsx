@@ -17,7 +17,7 @@ class App extends React.Component {
     }
 
     
-    topten(array, result=[], indexes=[]) {
+    topTenAuthor(array, result=[], indexes=[]) {
         if(result.length === 10) {
             return result;
         }
@@ -31,7 +31,7 @@ class App extends React.Component {
         }
         result.push(array[index])
         indexes.push(index)
-        return this.topten(array, result, indexes)
+        return this.topTenAuthor(array, result, indexes)
     }
 
     handelPageOne() {
@@ -42,7 +42,7 @@ class App extends React.Component {
         this.setState({page: 'page two'})    
     }
     render() {
-        const dataAuthor = this.topten(seedData)
+        const dataAuthor = this.topTenAuthor(seedData)
         const dataList = seedData.slice(0, 10).map((elm, index) => {
             
             return <TopTen dataStorie={elm} key={index} page={this.state.page} dataAuthor={dataAuthor[index]}/>
