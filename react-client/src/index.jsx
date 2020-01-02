@@ -6,7 +6,7 @@ import seedData from './../../seed_data'
 
 const App = (props) => {
     
-    const dataList = seedData.map((elm, index) => (
+    const dataList = seedData.slice(0, 10).map((elm, index) => (
         <TopTen data={elm} key={index}/>
     )) 
     

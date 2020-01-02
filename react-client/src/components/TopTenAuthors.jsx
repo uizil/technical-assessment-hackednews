@@ -1,6 +1,7 @@
 import React from 'react';
 
 
-const TopAuthores = () => {
-    
+
+const TopAuthores = props => {
+
 } 
